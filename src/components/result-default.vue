@@ -25,11 +25,12 @@
 				list:[],
 				num:0		
 			}
-		},		
+		},
+		props:["title"],
 		methods:{
 			loadMore() {
 				this.loading = true;			    
-		    	var url="http://youhui.lukou.com/api/commodity?start="+(this.num*20)+"&word=&cid=8&topic=0"
+		    	var url="http://youhui.lukou.com/api/commodity?start="+(this.num*20)+"&word="+this.title;				
 				axios.get(url)
 				.then(res=>{
 					let arr=[];
@@ -47,12 +48,11 @@
 
 <style scoped>
 	.main{
-		padding-top: 0.2rem;
 		width: 100%;
 		background: #f5f5f5;
 		overflow: hidden;
-	}
-	
+		padding-top: 0.15rem;
+	}	
 	.content ul{
 		display: flex;
 		flex-wrap: wrap;

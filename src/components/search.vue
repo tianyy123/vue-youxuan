@@ -1,12 +1,16 @@
 <template>
 	<div class="search">
-		<input type="text" placeholder="搜索商品，发现更多券券"/>
+		<input type="text" placeholder="搜索商品，发现更多券券" @focus="goTo"/>
 	</div>
 </template>
 
 <script>
 	export default{
-		
+		methods:{
+			goTo(){
+				this.$router.push("/search")
+			}
+		}
 	}
 </script>
 

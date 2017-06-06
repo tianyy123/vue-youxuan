@@ -8,7 +8,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="content">		
+		<div class="con">		
 			<ul ref="con_list">
 				<li><v-main></v-main></li>
 				<li><v-ladies></v-ladies></li>
@@ -79,6 +79,7 @@
 				}
 				var index_con=ev.target.getAttribute("index");
 				this.$refs.con_list.style.left=-index_con*14.4+"rem";
+				window.scrollTo(0,0)
 			},
 			siblings(elm){
 				var a = [];
@@ -126,6 +127,7 @@
 	 	position: absolute;
 	 	left: 0;
 	 	top: 0;
+	 	transition: all 300ms;
 	 }
 	 .choices ul li{
 	 	float: left;
@@ -139,13 +141,13 @@
 	 	margin: 0 0.42rem;
 	 	margin-top: 0.28rem;
 	 }
-	.content{
+	.con{
 		width: 100%;		
 		margin-top: 4.15rem;		
 		overflow: hidden;
 		margin-bottom: 2.05rem;
 	}
-	.content ul{		
+	.con ul{		
 		width: 100.8rem;
 		position: relative;
 		left: 0;
@@ -153,7 +155,7 @@
 		overflow: hidden;
 		transition: all 300ms;
 	}
-	.content ul li{
+	.con ul li{
 		list-style: none;
 		float: left;
 		width: 14.4rem;

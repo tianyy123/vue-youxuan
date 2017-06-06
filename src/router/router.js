@@ -10,7 +10,8 @@ import Collection from "../pages/collection"
 import My from "../pages/my"
 import Categories from "../pages/categories"
 import Login from "../pages/login"
-
+import Search from "../pages/search"
+import Result from "../pages/result"
 const routes=[
 	{path:"/index",name:"index",component:Index},
 	{path:"/sort",name:"sort",component:Sort},	
@@ -18,6 +19,8 @@ const routes=[
 	{path:"/my",name:"my",component:My},	
 	{path:"/categories/:uid",name:"categories",component:Categories},
 	{path:"/login",name:"login",component:Login},
+	{path:"/search",name:"search",component:Search},
+	{path:"/result/:uid",name:"result",component:Result},
 	{path:"*",redirect:"/index"},
 ]
 

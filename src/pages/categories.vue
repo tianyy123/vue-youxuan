@@ -7,7 +7,7 @@
 		<div class="content" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
 			<ul>
 				<li v-for="(item,index) in list" :key="index">
-					<a :href="item.url"><img :src="item.image"/></a>
+					<a :href="item.url"><img v-lazy="item.image"/></a>
 					<div class="detail">
 						<p>{{item.title}}</p>
 						<span class="price">￥{{item.price}}</span><span class="originPrice">￥{{item.originPrice}}</span><span class="mail">包邮</span>
@@ -136,5 +136,10 @@
 		text-align: center;
 		color: #f34f39;
 		margin-left: 0.16rem;
+	}
+	img[lazy=loading] {
+	    width: 1.5rem;
+	    height: 5.73rem;
+	    margin: auto;
 	}
 </style>
